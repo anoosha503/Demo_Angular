@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="client/">Client</a>
+        </li>
+        
+       
+      </ul>
+    </div>
+  </div>
+</nav> 
+
+<h3>Angular App</h3>
+
+<div class="container mt-5">
+  <form class="content">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Message</th>
+          <th scope="col">LogTime</th>
+         
+          <button (click)="reloadCurrentPage()">
+            Refresh
+          </button>
+          <!--<button (click)="ShowForms()">Add New</button>-->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of TableData">
+          <td>{{item.Id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.message}}</td>
+          <td>{{item.LogTime}}</td>
+         </tr>
+
+      </tbody>
+
+
+      <!--<pagination-controls (pageChange)="p=$event"></pagination-controls>-->
+
+    </table>
+
+  </form>
+</div>
+
+<router-outlet></router-outlet>
